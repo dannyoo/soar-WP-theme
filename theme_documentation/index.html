@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Template Documentation Template</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+        body{border: 5.333443px solid gray;}
+        img{width: 100%}
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Soar&rdquo; Documentation by &ldquo;Daniel Jimenez&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Soar&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 8/8/2016<br>
+					By: Daniel Jimenez<br>
+					Email: <a href="mailto:jimenezd305@gmail.com">jimenezd305@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/daniel_jimenez">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">PHP Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+            <li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#cust">Customize Theme</a></li>
+			<li><a href="#trans">Translation</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>A) PHP Structure</strong> - <a href="#toc">top</a></h3>
+		<p>The general template structure is the same throughout the template. Here is the general theme file structure according to wordpress.org :</p>
+		<img src="assets/images/template-hierarchy.png" alt="WordPress Template Hierarchy">		
+		<hr>
+
+		<h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>I'm using a main CSS file in this theme called styles.css. It holds all the styles implemented by the theme. This file also contains some general styling, such as anchor tag colors, font-sizes, etc. Keep in mind, that these values could be overridden somewhere else in the file.</p> 
+
+		<p>The styles.css file contains all of the specific stylings for the page. The file is separated into sections using this table of contents:</p>  
+<pre>	
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Normalize
+2.0 Typography
+3.0 Elements
+4.0 Forms
+5.0 Navigation
+	5.1 Links
+	5.2 Menus
+6.0 Accessibility
+7.0 Alignments
+8.0 Clearings
+9.0 Widgets
+10.0 Content
+	10.1 Posts and pages
+	10.2 Asides
+	10.3 Comments
+11.0 Infinite scroll
+12.0 Media
+	12.1 Captions
+	12.2 Galleries
+--------------------------------------------------------------*/
+</pre>
+		
+        <p>Advanced users can install the free plugin <b>Jetpack</b> and activate its option to enter your own CSS rules.</p>
+		<p>If you would like to edit a specific section of the site, simply find the appropriate section from the table of contents in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p> 
+		<p>If you find that your new style is not overriding, it is most likely because of a specificity problem. Scroll down in your CSS file and make sure that there isn't a similar style that has more specificity.</p>
+
+		<p>I.E.</p>
+
+<pre>	#wrap #primary a {
+		color: #someColor;
+	}
+</pre>
+
+		<p>So, to ensure that your new styles are applied, make sure that they carry enough "weight" and that there isn't a style lower in the CSS file that is being applied after yours.</p> 
+        <p>The SASS files have also been included in the sass folder.</p>
+
+
+		<hr>
+		
+		<h3 id="javascript"><strong>C) JavaScript</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This theme at the current settings imports three Javascript files through custom-functions.php. Those javascript files are in the "js" folder.</p>
+		
+		<ol>
+			<li>jQuery</li>
+			<li>Modernizr</li>
+			<li>Navigation Script</li>
+			<li>REM Unit Polyfill</li>
+		</ol>
+		  
+		<ol>
+			<li>jQuery is a Javascript library that greatly reduces the amount of code that you must write.</li>
+			<li>Modernizr is a collection of superfast tests which run as your web page loads, then the results are used to tailor the best experience to the user.</li>
+			<li>The navigation script is a small file to make the expanded navigtion menu more friendly on touch devices.</li>
+			<li>REM Unit Polyfill is a small file that tests for REM unit support. If the browser does not support it, the script offers a quick fix so that the user experience is still beautiful.</li>
+		</ol>
+		<p>There are other javascript files in the "js" folder that may be loaded in for extra convinience such a "skip-link-focus-fix.js".</p>
+		<hr>
+		
+		<h3 id="cust"><strong>D) Customize Theme</strong> - <a href="#toc">top</a></h3>
+		
+        <p>You can customize the appearance of the theme to fit your needs. Access these options at <b>“Appearance” → “Customize”</b>. A preview window will open up with a new sidbar on the left. Here you’ll find all available options.</p>
+		
+        <p>To use other Google Fonts you can download and install the free <b>Easy Google Fonts</b> plugin: <a target="_blank" href="https://wordpress.org/plugins/easy-google-fonts/">https://wordpress.org/plugins/easy-google-fonts/</a></p>
+        
+        <p>After that you can chose the font that fits your needs. Be aware that some fonts render bigger than others, so check the theme after switching fonts for glitches.</p>
+        
+        <p>Font Awesome has also been included. For reference on how to use the icon you want, visit <a target="_blank" href="http://fontawesome.io/icons/">http://fontawesome.io/icons/</a>.</p>
+		
+		<hr>
+		
+		<h3 id="trans"><strong>E) Translations</strong> - <a href="#toc">top</a></h3>
+		
+        <p>You can create other languages, too. The free app <b>PO-Editor</b> will help you translating the theme into your language. Detailed instructions can be found here: <a target="_blank" href="http://code.tutsplus.com/tutorials/translating-your-theme--wp-25014">http://code.tutsplus.com/tutorials/translating-your-theme--wp-25014</a>
+As an alternative you can use the Wordpress plugin <b>Loco</b> to translate the theme right inside the admin area: <a target="_blank" href="https://wordpress.org/plugins/loco-translate/">https://wordpress.org/plugins/loco-translate/</a>.</p>
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Daniel Jimenez</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
